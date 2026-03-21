@@ -82,6 +82,7 @@ The API will be available at `http://localhost:5000`
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | POST | `/predict` | Predict sentiment of comments |
+| POST | `/generate_chart` | Generate Pie chart |
 | POST | `/generate_trend_graph` | Generate sentiment trend over time |
 | POST | `/generate_wordcloud` | Generate word cloud from comments |
 
