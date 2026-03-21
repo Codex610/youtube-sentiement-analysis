@@ -124,7 +124,7 @@ def predict_with_timestamps():
     return jsonify(response)
 
 
-
+## Prediction
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.json
@@ -158,7 +158,7 @@ def predict():
     return jsonify(response)
 
 
-
+## generate pie chart
 @app.route('/generate_chart', methods=['POST'])
 def generate_chart():
     try:
@@ -204,6 +204,7 @@ def generate_chart():
         app.logger.error(f"Error in /generate_chart: {e}")
         return jsonify({"error": f"Chart generation failed: {str(e)}"}), 500
 
+## Display most important words
 @app.route('/generate_wordcloud', methods=['POST'])
 def generate_wordcloud():
     try:
@@ -240,6 +241,7 @@ def generate_wordcloud():
         app.logger.error(f"Error in /generate_wordcloud: {e}")
         return jsonify({"error": f"Word cloud generation failed: {str(e)}"}), 500
 
+## generate sentiment trend graph
 @app.route('/generate_trend_graph', methods=['POST'])
 def generate_trend_graph():
     try:
